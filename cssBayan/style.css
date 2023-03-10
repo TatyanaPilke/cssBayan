@@ -124,9 +124,10 @@ i {
   transition: opacity 0.3s, transform 0.3s ease;
 }
 
-.faq__input:hover ~ .faq__inner{
-  max-height: 300px;
-  border: 1px solid #000;
+
+
+.faq__input:active ~ .faq__inner {
+  opacity: 0.8;
 }
 
 .faq:hover i {
@@ -136,10 +137,6 @@ i {
 .faq__input:hover ~ i {
   transform: rotate(-45deg);
 }
-
-.faq__item:hover .faq__title {
-  margin-bottom: 20px;
-} 
 
 .faq__subtitle {
   font-size: 30px;
@@ -155,18 +152,21 @@ i {
 }
 
 .faq__title {
+  color: rgb(46, 81, 220);
   display: flex;
   justify-content: space-between;
   position: relative;
   cursor: pointer;
   font-size: 20px;
   font-weight: 800;
+  transition: color 0.4s;
 }
 
 .faq__item{
   position: relative;
   padding: 30px 0;
   border-top: 1px solid rgba(194, 194, 194, 0.4);
+  transition: color 0.4s;
 }
 
 .faq__input {
@@ -187,6 +187,32 @@ i {
   max-height: 300px;
   margin-top: 20px;
 }
+
+.faq__input:active ~ i {
+  color: rgb(46, 81, 220);
+}
+
+.faq__input:hover ~ .faq__inner{
+  max-height: 300px;
+  border: 1px solid #000;
+}
+
+.faq__input:hover ~ .faq__title {
+  color: #000;
+}
+
+.faq__input:checked ~ .faq__title {
+  color: #000;
+}
+
+.faq__input:active ~ .faq__title {
+  color: rgb(46, 81, 220);
+}
+
+.faq__item:hover .faq__title {
+  margin-bottom: 20px;
+} 
+
 
 @media (max-width: 992px) {
   .wrapper {
