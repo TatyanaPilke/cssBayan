@@ -85,8 +85,8 @@ body {
 
 .wrapper {
   margin: 0 auto;
+  max-width: 900px;
   background-color: #ffffff;
-  width: 50%;
   padding: 30px 40px 30px 60px;
 }
 
@@ -186,6 +186,47 @@ i {
 .faq__input:checked ~ .faq__inner {
   max-height: 300px;
   margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    padding: 20px;
+  }
+
+  .header__title {
+    font-size: 38px;
+  }
+
+  .faq__title {
+    font-size: 18px;
+  }
+
+  .faq__subtitle {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header__title {
+    font-size: 30px;
+  }
+
+  .faq__subtitle {
+    padding: 10px;
+  }
+
+  .faq__title {
+    font-size: 14px;
+    padding-right: 20px;
+  }
+
+  .faq__subtitle {
+    font-size: 20px;
+  }
+  
+  .faq__input:checked ~ .faq__inner {
+    max-height: 250px;
+  }
 }
 
 
