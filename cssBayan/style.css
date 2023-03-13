@@ -108,6 +108,7 @@ body {
 }
 
 .faq__inner {
+  transform: scale(0.7);
   pointer-events: none;
   display: flex;
   text-align: center;
@@ -121,7 +122,7 @@ body {
   overflow: hidden;
   background-color: rgb(140, 139, 139);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  transition: max-height 0.7s, visibility 0.6s;
+  transition: max-height 0.7s, visibility 0.6s, transform 0.6s;
 }
 
 i {
@@ -193,6 +194,7 @@ i {
   margin-top: 20px;
   visibility: visible;
   border-color: #000;
+  transform: scale(1);
 }
 
 .faq__input:active~i {
@@ -203,6 +205,7 @@ i {
   max-height: 300px;
   visibility: visible;
   border-color: #000;
+  transform: scale(1);
 }
 
 .faq:hover .faq__title {
@@ -220,7 +223,6 @@ i {
 .faq__item:hover .faq__title {
   margin-bottom: 20px;
 }
-
 
 @media (max-width: 992px) {
   .wrapper {
